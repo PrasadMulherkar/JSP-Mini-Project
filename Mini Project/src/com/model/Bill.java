@@ -6,6 +6,12 @@ public class Bill {
 	private double Gst;
 	private double Final;
 	private double total;
+	public Bill(double gst, double final1, double total) {
+		super();
+		Gst = gst;
+		Final = final1;
+		this.total = total;
+	}
 	public double getGst() {
 		return Gst;
 	}

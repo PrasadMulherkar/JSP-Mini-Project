@@ -1,3 +1,4 @@
+<%@page import="com.model.Customer"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -8,8 +9,15 @@
 </head>
 <body>
 <h1>Customer Details</h1>
+<%! Customer customer = null; %>
+<%
+	customer = (Customer) session.getAttribute("Customer");
+%>
+<%= customer.getName() %><br>
+<%= customer.getMobile() %><br>
+<%= customer.getEmail() %><br>
 <h1>Product Details</h1>
-<form action="ProductServlet">
+<form action="ProductServlet" method="post">
 		Product Name : <input type="text" name="prodname">
 		Prdouct Price : <input type="number" name="prodprice">
 		Product Quantity : <input type="number" name="prodqty">

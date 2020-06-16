@@ -5,6 +5,12 @@ public class Product {
 	private String Name;
 	private double Price;
 	private int Quantity;
+	public Product(String name, double price, int quantity) {
+		super();
+		Name = name;
+		Price = price;
+		Quantity = quantity;
+	}
 	public String getName() {
 		return Name;
 	}

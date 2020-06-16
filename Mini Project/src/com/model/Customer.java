@@ -4,20 +4,36 @@ public class Customer {
 	//Name, Mobile, Email, UserName, Password
 	
 	private String Name;
-	private int Mobile;
+	private long Mobile;
 	private String Email;
 	private String UserName;
 	private String Password;
+	public Customer(String userName, String password) {
+		UserName = userName;
+		Password = password;
+	}
+	public Customer(String name, long mobile, String email) {
+		Name = name;
+		Mobile = mobile;
+		Email = email;
+	}
+	public Customer(String name, long mobile, String email, String userName, String password) {
+		Name = name;
+		Mobile = mobile;
+		Email = email;
+		UserName = userName;
+		Password = password;
+	}
 	public String getName() {
 		return Name;
 	}
 	public void setName(String name) {
 		Name = name;
 	}
-	public int getMobile() {
+	public long getMobile() {
 		return Mobile;
 	}
-	public void setMobile(int mobile) {
+	public void setMobile(long mobile) {
 		Mobile = mobile;
 	}
 	public String getEmail() {

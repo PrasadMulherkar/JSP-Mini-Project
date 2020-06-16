@@ -8,10 +8,20 @@
 <link rel="stylesheet" href="styl.css" />
 </head>
 <body>
+<%! String str = null; %>
+<% if(!session.isNew()) {
+		Object object = session.getAttribute("Register");
+		if(object != null) {
+			str = (String) object;
+			%>
+				<h2 style="text-align: center;"><%= str %></h2>			
+			<%
+		}
+} %>
 <div class="registerbox">
    
         <h1>Register Here</h1>
-        <form action="RegisterServlet">
+        <form action="RegisterServlet" method="post">
             <p>Name</p>
             <input type="text" name="name" placeholder="Enter your name">
             
@@ -24,10 +34,10 @@
             <p>User Name</p>
             <input type="text" name="username" placeholder="User id">
             
-            <p>Mobile No</p>
-            <input type="number" name="" placeholder="Enter Password">
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password">
             
-            <input type="submit" name="password" value="Register">
+            <input type="submit" value="Register">
             
         </form>
         <a href="Login.jsp">Login Here</a><br>

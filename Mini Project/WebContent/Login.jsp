@@ -8,16 +8,26 @@
 <link rel="stylesheet" href="styl.css" />
 </head>
 <body>
+<%! String str = null; %>
+<% if(!session.isNew()) {
+		Object object = session.getAttribute("Login");
+		if(object != null) {
+			str = (String) object;
+			%>
+				<h2><%= str %></h2>			
+			<%
+		}
+} %>
 <div class="loginbox">
    
         <h1>Login Here</h1>
-        <form action="RegisterServlet">
+        <form action="LoginServlet" method="post">
             <p>Username</p>
-            <input type="text" name="" placeholder="Enter Username">
+            <input type="text" name="username" placeholder="Enter Username">
             <p>Password</p>
-            <input type="password" name="" placeholder="Enter Password">
+            <input type="password" name="password" placeholder="Enter Password">
             
-            <input type="submit" name="" value="Login">
+            <input type="submit" value="Login">
             
         </form>
         <a href="Register.jsp">New User Register Here</a><br>
