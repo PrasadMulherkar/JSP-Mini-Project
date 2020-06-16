@@ -40,6 +40,6 @@
 		}
 	}
 %>
-<a href="Bill.jsp">Bill</a>
+<a href="Bill.jsp">Bill</a><br>
 </body>
 </html>

@@ -24,13 +24,15 @@ public class CartServlet extends HttpServlet {
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Customer customer = (Customer) request.getSession().getAttribute("Customer");
-		double total=0;
+		double total=0, gst, finaltotal;
 		Dao dao = new Dao();
 		List<Product> productList = dao.getProducts(customer);
 		for(Product product : productList) {
 			total += product.getPrice()*product.getQuantity();
 		}
-		Bill bill = new Bill(total, total*0.18, total+total*0.18);
+		gst = total*0.18;
+		finaltotal = gst + total;
+		Bill bill = new Bill(gst, finaltotal, total);
 		HttpSession session = request.getSession();
 		session.setAttribute("ProductList", productList);
 		session.setAttribute("Bill", bill);
