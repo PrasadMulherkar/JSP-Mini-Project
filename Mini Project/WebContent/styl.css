@@ -1,43 +1,84 @@
 @charset "ISO-8859-1";
 /*Home*/
-#body{
-	background-image: url("back.jpg");
-	
+body{ 
+    font-family: sans-serif;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+     background-position: center;
+     backgound-image:url("image/bg.jpg");
 }
 li {
   list-style:none;
 }
-#header {
-		background-color: rgba(53, 56, 73, 0.95);
-		height: 4.5em;
-		left: 0;
-		line-height: 3.5em;
-		padding: 0 1.25em;
-		position: fixed;
-		top: 0;
-		width: 100%;
-		list-style:none;
-}
-.links{
-	 text-align: center; 
+
+#header{
+	box-sizing: border-box;
+	margin: 0;
+	padding:0;
+	background-color: #24252A;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;	
 }
 
-/*Login*/
-body{
-    margin: 0;
-    padding: 0;
-    
-    background-size: cover;
-    background-position: center;
-    font-family: sans-serif;
+li,a,button{
+	font-weight: 500;
+	font-size: 16px;
+	color:#edf0f1;
+	text-decoration: none;
 }
+.main{
+	text-align: center;
+	font-family: sans-serif;
+}
+.main h1{
+	font-size: 40px;
+}
+
+.links li{
+	display: inline-block;
+	padding: 0px 10px;
+}
+
+.links li a{
+	transition: all 0.3s ease 0s;
+}
+
+.links li a:hover {
+	color:#0088a9
+}
+
+button{
+	padding: 9px 25px;
+	background-color: rgba(0,136,149,1);
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+button:hover{
+	background-color: rgba(0,136,149,1);
+}
+
+#header li, a, button{
+	color:#edf0f1;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 16px;
+}
+
+
+/*Login*/
+
+
 
 .loginbox{
     width: 320px;
     height: 420px;
     background: #000;
     color: #fff;
-    top: 50%;
+    top: 60%;
     left: 50%;
     position: absolute;
     transform: translate(-50%,-50%);
@@ -47,7 +88,7 @@ body{
 
 
 
-h1{
+.loginbox h1{
     margin: 0;
     padding: 0 0 20px;
     text-align: center;
@@ -110,7 +151,7 @@ h1{
     height: 660px;
     background: #000;
     color: #fff;
-    top: 90%;
+    top: 70%;
     left: 50%;
     position: absolute;
     transform: translate(-50%,-50%);
@@ -120,7 +161,7 @@ h1{
 
 
 
-h1{
+.registerbox h1{
     margin: 0;
     padding: 0 0 20px;
     text-align: center;
