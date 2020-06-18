@@ -18,6 +18,17 @@
 			<%
 		}
 } %>
+<header id="header" class="alt">
+					
+<nav>						
+<ul class="links">
+	
+	<li><a href="Home.jsp" >Home </a></li>
+	<li><a href="Login.jsp" >login </a></li>
+	 <li><a href="Register.jsp" ><button>Register here </button></a></li>
+</ul>
+</nav>
+</header>
 <div class="registerbox">
    
         <h1>Register Here</h1>
@@ -40,7 +51,7 @@
             <input type="submit" value="Register">
             
         </form>
-        <a href="Login.jsp">Login Here</a><br>
+        <a href="Login.jsp">Already a user Login Here</a><br>
             <a href="Home.jsp">Home</a>
         
     </div>
