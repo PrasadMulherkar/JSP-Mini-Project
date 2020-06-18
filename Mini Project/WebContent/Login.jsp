@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="styl.css" />
+<script src="script.js"></script>
 </head>
 <body>
 <%! String str = null; %>
@@ -18,14 +19,26 @@
 			<%
 		}
 } %>
+<header id="header" class="alt">
+					
+<nav>						
+<ul class="links">
+	
+	<li><a href="Home.jsp" >Home</a></li>
+	<li><a href="Login.jsp" ><button>login </button></a></li>
+	<li><a href="Register.jsp" >Register here</a></li>
+</ul>
+</nav>
+</header>
 <div class="loginbox">
    
         <h1>Login Here</h1>
-        <form action="LoginServlet" method="post">
+      <div id="error"></div>
+        <form action="LoginServlet" method="post" >
             <p>Username</p>
-            <input type="text" name="username" placeholder="Enter Username">
+            <input type="text" name="username" placeholder="Enter Username" id="name" required>
             <p>Password</p>
-            <input type="password" name="password" placeholder="Enter Password">
+            <input type="password" name="password" placeholder="Enter Password" id="password" >
             
             <input type="submit" value="Login">
             
