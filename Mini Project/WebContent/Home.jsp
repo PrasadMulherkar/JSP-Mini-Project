@@ -9,14 +9,22 @@
 </head>
 <body>
 <header id="header" class="alt">
-						<h1 style="color:White">Welcome</h1>
-						
+					
+<nav>						
 <ul class="links">
 	
-	<li><input type="button" onclick="location.href='Register.jsp'" value="Register Here"></li>
-	<li><input type="button" onclick="location.href='Login.jsp'" value="Login Here"></li>
-	
+	<li><a href="Home.jsp" ><button>Home </button></a></li>
+	<li><a href="Login.jsp" >login</a></li>
+	<li><a href="Register.jsp" >Register here </a></li>
 </ul>
+</nav>
 </header>
+		<div class="main">
+		<h1><br><br>Welcome to our shopping platform</h1>
+		<h2>We provide best products and take care of your choices so if you are new just create an account and start shopping
+		<br><br>
+			And yes we provide a secure environment and keep your data safe
+		<h2>
+		</div>
 </body>
 </html>
